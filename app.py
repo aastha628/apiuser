@@ -15,7 +15,7 @@ def mongopostdata(user):
         return 0
     
 
-@app.route('/postdata', methods=["POST"])
+@app.route('/', methods=["POST"])
 def req_data():
     request_body =request.get_json()
 
