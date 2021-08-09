@@ -29,9 +29,10 @@ def req_data():
 
     value=mongopostdata(user)
     if value==1:
-        return "Data saved Successfully"
+        status_return= "Data saved Successfully"
     else:
-        return "Error in saving the data"
+        status_return= "Error in saving the data"
+    return jsonify(status_return)
 
 
 if __name__ =="__main__":
