@@ -8,7 +8,7 @@ app.secret_key="secretkey"
 def mongopostdata(user):
     app.config["MONGO_URI"]="mongodb+srv://aastha18:thunderbird@cluster0.a0epe.mongodb.net/formfill?retryWrites=true&w=majority"
     mongo=PyMongo(app)
-    id = mongo.db.firstform.save(user)
+    id = mongo.db.firstform.insert_one(user)
     # if id!=NULL:
     #     return 1
     # else:
